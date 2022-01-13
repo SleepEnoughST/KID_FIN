@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - enemy
+  - Box
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - charactor
+  - Water
+  - UI
+  - enemy
+  - ground
+  - "\u89F8\u767C"
+  - Bullet
+  - door
+  - Box
+  - enemy_bullet
+  - "\u5C16\u523A"
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: enemy
+    uniqueID: 3327032905
+    locked: 0
+  - name: charactor
+    uniqueID: 4177197663
+    locked: 0
