@@ -24,6 +24,8 @@ public class ene_3 : MonoBehaviour
     [Header("檢查攻擊區域大小與位移")]
     public Vector3 v3AttackSize = Vector3.one;
     public Vector3 v3AttackIOffset;
+    public float shootSpeed;
+   
 
     private float angle = 0;
     private Rigidbody2D rb;
@@ -75,6 +77,7 @@ public class ene_3 : MonoBehaviour
         else
         {
             anim.SetBool(enemyWalk, false);
+            Attack();
         }
     }
     private void Move()
@@ -122,11 +125,12 @@ public class ene_3 : MonoBehaviour
             anim.SetTrigger(enemyAttack);
             GameObject projectileOnject = Instantiate(a, rb.position, Quaternion.identity);
             enemy_bullet bullet = projectileOnject.GetComponent<enemy_bullet>();
-            float k = GetComponent<Transform>().rotation.y;
-            if (k < 0)
-            {
-                bullet.Launch(transform.TransformDirection(v3AttackIOffset), 300);
-            }
+            projectileOnject.GetComponent<Rigidbody2D>().velocity = new Vector2(shootSpeed, 0f);
+            //float k = GetComponent<Transform>().rotation.y;
+            //if (k < 0)
+            //{
+            //    bullet.Launch(transform.TransformDirection(v3AttackIOffset), 0);
+            //}
             t2 = t1;
         }
        

@@ -7,6 +7,8 @@ public class enemy_bullet : MonoBehaviour
     private Rigidbody2D rb;
     private Animator Ani;
     public float bulletDis;
+    public GameObject dieEffect;
+    public float dieTime, damage;
 
     //【擊中特效 1/2】
     public ParticleSystem hitEffect;
@@ -48,7 +50,7 @@ public class enemy_bullet : MonoBehaviour
     //【未擊中目標的子彈自動銷毀 1/1】以距離來計算
     void Update()
     {
-            Destroy(gameObject, 2f);
+
 
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -60,7 +62,18 @@ public class enemy_bullet : MonoBehaviour
             character_blood1 kgGO3 = collision.GetComponent<character_blood1>();
             print("攻擊到" + collision.name);
             kgGO3.ChangeHealth(-10);
-            Destroy(gameObject);
+            //Die();
         }
     }
+    IEnumerator CountDownTimer()
+    {
+        yield return new WaitForSeconds(dieTime);
+
+        //Die();
+    }
+
+    //void Die()
+    //{
+    //    Destroy(gameObject);
+    //}
 }
