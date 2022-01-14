@@ -65,7 +65,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: "\u9060\u7A0B\u653B\u64CA"
+    m_ConditionEvent: "\u958B\u95DC\u885D\u523A"
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -3534087173810357071}
