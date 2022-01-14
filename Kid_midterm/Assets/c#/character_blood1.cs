@@ -74,6 +74,7 @@ public class character_blood1 : MonoBehaviour
             //Destroy(gameObject, 1.8f);
             Die();
             hurt = true;
+            score.Sc = 0;
         }
         if (amount <= -1 && currentHealth > 1)
         {

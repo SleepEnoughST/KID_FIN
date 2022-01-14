@@ -8,6 +8,7 @@ public class scene : MonoBehaviour
     public void LoadScene(string nameScene)
     {
         SceneManager.LoadScene(nameScene);
+        score.Sc = 0;
     }
     public void Quit()
     {
